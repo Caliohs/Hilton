@@ -24,7 +24,7 @@ namespace Hilton.Modelo
 
         public Datos()
         {
-            strCadenaConexion = @"Data Source= BRISEYDA\SQLEXPRESS;  Initial Catalog = Agenda; Integrated Security=SSPI";
+            strCadenaConexion = @"Data Source= CALIOHS\SQLEXPRESS;  Initial Catalog = Hilton; Integrated Security=SSPI";
         }
 
 

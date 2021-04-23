@@ -87,23 +87,23 @@ namespace Hilton.Controlador
                 parParameter[4].Size = 30;
                 parParameter[4].SqlValue = objHotel.Estado;
 
-                parParameter[4] = new SqlParameter();
-                parParameter[4].ParameterName = "@cantidad";
-                parParameter[4].SqlDbType = SqlDbType.VarChar;
-                parParameter[4].Size = 30;
-                parParameter[4].SqlValue = objHotel.CantidadHabi;
-
-                parParameter[4] = new SqlParameter();
-                parParameter[4].ParameterName = "@especializacion";
-                parParameter[4].SqlDbType = SqlDbType.VarChar;
-                parParameter[4].Size = 30;
-                parParameter[4].SqlValue = objHotel.Especializacion;
-
                 parParameter[5] = new SqlParameter();
-                parParameter[5].ParameterName = "@presupuesto";
+                parParameter[5].ParameterName = "@cantidad";
                 parParameter[5].SqlDbType = SqlDbType.VarChar;
                 parParameter[5].Size = 30;
-                parParameter[5].SqlValue = objHotel.Presupuesto;
+                parParameter[5].SqlValue = objHotel.CantidadHabi;
+
+                parParameter[6] = new SqlParameter();
+                parParameter[6].ParameterName = "@especializacion";
+                parParameter[6].SqlDbType = SqlDbType.VarChar;
+                parParameter[6].Size = 30;
+                parParameter[6].SqlValue = objHotel.Especializacion;
+
+                parParameter[7] = new SqlParameter();
+                parParameter[7].ParameterName = "@presupuesto";
+                parParameter[7].SqlDbType = SqlDbType.VarChar;
+                parParameter[7].Size = 30;
+                parParameter[7].SqlValue = objHotel.Presupuesto;
 
                 cnGeneral.EjecutarSP(parParameter, "SPHotel");
 

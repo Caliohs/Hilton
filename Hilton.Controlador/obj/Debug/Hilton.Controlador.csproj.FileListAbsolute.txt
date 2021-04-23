@@ -1,0 +1,9 @@
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Controlador\bin\Debug\Hilton.Controlador.dll
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Controlador\bin\Debug\Hilton.Controlador.pdb
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Controlador\bin\Debug\Hilton.Modelo.dll
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Controlador\bin\Debug\Hilton.Modelo.pdb
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Controlador\obj\Debug\Hilton.Controlador.csprojAssemblyReference.cache
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Controlador\obj\Debug\Hilton.Controlador.csproj.CoreCompileInputs.cache
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Controlador\obj\Debug\Hilton.Controlador.csproj.CopyComplete
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Controlador\obj\Debug\Hilton.Controlador.dll
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Controlador\obj\Debug\Hilton.Controlador.pdb

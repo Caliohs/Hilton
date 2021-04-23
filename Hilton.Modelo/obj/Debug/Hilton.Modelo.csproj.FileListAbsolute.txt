@@ -1,0 +1,6 @@
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Modelo\bin\Debug\Hilton.Modelo.dll
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Modelo\bin\Debug\Hilton.Modelo.pdb
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Modelo\obj\Debug\Hilton.Modelo.csprojAssemblyReference.cache
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Modelo\obj\Debug\Hilton.Modelo.csproj.CoreCompileInputs.cache
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Modelo\obj\Debug\Hilton.Modelo.dll
+C:\Users\cca\Desktop\Hilton\Hilton\Hilton.Modelo\obj\Debug\Hilton.Modelo.pdb
