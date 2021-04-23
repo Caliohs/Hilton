@@ -51,6 +51,8 @@ namespace Hilton.Vista
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDolarEstudiante = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHoteles)).BeginInit();
             this.gpbEspecializacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,7 +82,7 @@ namespace Hilton.Vista
             // 
             // txtPais
             // 
-            this.txtPais.Location = new System.Drawing.Point(158, 123);
+            this.txtPais.Location = new System.Drawing.Point(158, 154);
             this.txtPais.Margin = new System.Windows.Forms.Padding(2);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(108, 20);
@@ -89,7 +91,7 @@ namespace Hilton.Vista
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 126);
+            this.label2.Location = new System.Drawing.Point(28, 154);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
@@ -98,7 +100,7 @@ namespace Hilton.Vista
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(158, 174);
+            this.txtEstado.Location = new System.Drawing.Point(158, 195);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(2);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(108, 20);
@@ -107,7 +109,7 @@ namespace Hilton.Vista
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 177);
+            this.label3.Location = new System.Drawing.Point(28, 202);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
@@ -198,10 +200,11 @@ namespace Hilton.Vista
             // 
             // mskPresupuesto
             // 
+            this.mskPresupuesto.Enabled = false;
             this.mskPresupuesto.Location = new System.Drawing.Point(158, 362);
             this.mskPresupuesto.Mask = "99999";
             this.mskPresupuesto.Name = "mskPresupuesto";
-            this.mskPresupuesto.Size = new System.Drawing.Size(108, 20);
+            this.mskPresupuesto.Size = new System.Drawing.Size(48, 20);
             this.mskPresupuesto.SkipLiterals = false;
             this.mskPresupuesto.TabIndex = 5;
             this.mskPresupuesto.ValidatingType = typeof(int);
@@ -273,12 +276,34 @@ namespace Hilton.Vista
             this.lblDolarEstudiante.TabIndex = 38;
             this.lblDolarEstudiante.Text = "$";
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(158, 123);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(108, 20);
+            this.txtNombre.TabIndex = 39;
+            this.txtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(28, 126);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 40;
+            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Click += new System.EventHandler(this.label7_Click);
+            // 
             // GestionarHoteles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(753, 438);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblDolarEstudiante);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtBuscar);
@@ -298,6 +323,7 @@ namespace Hilton.Vista
             this.Controls.Add(this.label1);
             this.Name = "GestionarHoteles";
             this.Text = "GestionarHoteles";
+            this.Load += new System.EventHandler(this.GestionarHoteles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgHoteles)).EndInit();
             this.gpbEspecializacion.ResumeLayout(false);
             this.gpbEspecializacion.PerformLayout();
@@ -330,5 +356,7 @@ namespace Hilton.Vista
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblDolarEstudiante;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

@@ -45,5 +45,11 @@
     <Compile Include="HotelHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hilton.Modelo\Hilton.Modelo.csproj">
+      <Project>{2c872bcc-c7c3-4013-9add-2a991b16206a}</Project>
+      <Name>Hilton.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
