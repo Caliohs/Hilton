@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteHelper.cs" />
     <Compile Include="Hotel.cs" />
     <Compile Include="HotelHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

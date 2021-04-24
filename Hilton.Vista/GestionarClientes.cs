@@ -19,7 +19,7 @@ namespace Hilton.Vista
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("HOla");
+            
         }
     }
 }
