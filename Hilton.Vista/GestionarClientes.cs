@@ -24,15 +24,15 @@ namespace Hilton.Vista
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            
+            Guardar_Cliente();
         }
 
         private void GestionarClientes_Load(object sender, EventArgs e)
         {
-
+            Listar();
         }
 
-        public void Guardar_Hotel()
+        public void Guardar_Cliente()
         {
             try
             {
@@ -67,6 +67,7 @@ namespace Hilton.Vista
             try
             {
                 cliente = new Cliente();
+                cliente.Opc = 2;
                 clienteHelper = new ClienteHelper(cliente);
                 datos = clienteHelper.Listar();
 
