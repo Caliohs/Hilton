@@ -31,7 +31,6 @@ namespace Hilton.Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarClientes));
             this.label1 = new System.Windows.Forms.Label();
-            this.dtgHoteles = new System.Windows.Forms.DataGridView();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.mskCedula = new System.Windows.Forms.MaskedTextBox();
@@ -41,7 +40,7 @@ namespace Hilton.Vista
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.gpbTipoCliente = new System.Windows.Forms.GroupBox();
             this.rdbSocio = new System.Windows.Forms.RadioButton();
@@ -51,36 +50,26 @@ namespace Hilton.Vista
             this.label5 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgHoteles)).BeginInit();
+            this.dtgClientes = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gpbTipoCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Maiandra GD", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(267, 29);
+            this.label1.Location = new System.Drawing.Point(326, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "Gestionar Clientes";
             // 
-            // dtgHoteles
-            // 
-            this.dtgHoteles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgHoteles.Location = new System.Drawing.Point(287, 139);
-            this.dtgHoteles.Margin = new System.Windows.Forms.Padding(2);
-            this.dtgHoteles.Name = "dtgHoteles";
-            this.dtgHoteles.RowHeadersWidth = 51;
-            this.dtgHoteles.RowTemplate.Height = 24;
-            this.dtgHoteles.Size = new System.Drawing.Size(502, 260);
-            this.dtgHoteles.TabIndex = 24;
-            // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(159, 183);
+            this.txtNombre.Location = new System.Drawing.Point(141, 152);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(108, 20);
@@ -89,7 +78,7 @@ namespace Hilton.Vista
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 186);
+            this.label2.Location = new System.Drawing.Point(19, 155);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
@@ -98,7 +87,7 @@ namespace Hilton.Vista
             // 
             // mskCedula
             // 
-            this.mskCedula.Location = new System.Drawing.Point(159, 140);
+            this.mskCedula.Location = new System.Drawing.Point(141, 109);
             this.mskCedula.Mask = "0-0000-0000";
             this.mskCedula.Name = "mskCedula";
             this.mskCedula.Size = new System.Drawing.Size(108, 20);
@@ -107,7 +96,7 @@ namespace Hilton.Vista
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 143);
+            this.label3.Location = new System.Drawing.Point(19, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
@@ -117,7 +106,7 @@ namespace Hilton.Vista
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(587, 96);
+            this.pictureBox1.Location = new System.Drawing.Point(845, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 20);
             this.pictureBox1.TabIndex = 51;
@@ -125,16 +114,16 @@ namespace Hilton.Vista
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(484, 96);
+            this.txtBuscar.Location = new System.Drawing.Point(693, 70);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(108, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(157, 20);
             this.txtBuscar.TabIndex = 50;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(430, 99);
+            this.label6.Location = new System.Drawing.Point(649, 73);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
@@ -143,7 +132,7 @@ namespace Hilton.Vista
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(723, 410);
+            this.btnCancelar.Location = new System.Drawing.Point(787, 398);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(63, 29);
@@ -153,7 +142,7 @@ namespace Hilton.Vista
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(635, 410);
+            this.btnAceptar.Location = new System.Drawing.Point(699, 398);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(68, 29);
@@ -162,21 +151,21 @@ namespace Hilton.Vista
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // comboBox1
+            // cmbMetodoPago
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbMetodoPago.FormattingEnabled = true;
+            this.cmbMetodoPago.Items.AddRange(new object[] {
             "Débito ",
             "Crédito"});
-            this.comboBox1.Location = new System.Drawing.Point(159, 229);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(108, 21);
-            this.comboBox1.TabIndex = 57;
+            this.cmbMetodoPago.Location = new System.Drawing.Point(141, 198);
+            this.cmbMetodoPago.Name = "cmbMetodoPago";
+            this.cmbMetodoPago.Size = new System.Drawing.Size(108, 21);
+            this.cmbMetodoPago.TabIndex = 57;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 232);
+            this.label4.Location = new System.Drawing.Point(19, 201);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
@@ -189,7 +178,7 @@ namespace Hilton.Vista
             this.gpbTipoCliente.Controls.Add(this.rdbVip);
             this.gpbTipoCliente.Controls.Add(this.rdbRegular);
             this.gpbTipoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbTipoCliente.Location = new System.Drawing.Point(40, 266);
+            this.gpbTipoCliente.Location = new System.Drawing.Point(22, 235);
             this.gpbTipoCliente.Name = "gpbTipoCliente";
             this.gpbTipoCliente.Size = new System.Drawing.Size(227, 45);
             this.gpbTipoCliente.TabIndex = 59;
@@ -235,7 +224,7 @@ namespace Hilton.Vista
             // 
             // mskTelefono
             // 
-            this.mskTelefono.Location = new System.Drawing.Point(159, 379);
+            this.mskTelefono.Location = new System.Drawing.Point(141, 348);
             this.mskTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.mskTelefono.Mask = "0000-0000";
             this.mskTelefono.Name = "mskTelefono";
@@ -245,7 +234,7 @@ namespace Hilton.Vista
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 382);
+            this.label5.Location = new System.Drawing.Point(19, 351);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
@@ -254,7 +243,7 @@ namespace Hilton.Vista
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(159, 336);
+            this.txtCorreo.Location = new System.Drawing.Point(141, 305);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(108, 20);
@@ -263,25 +252,40 @@ namespace Hilton.Vista
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 339);
+            this.label7.Location = new System.Drawing.Point(19, 308);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 64;
             this.label7.Text = "Correo";
             // 
+            // dtgClientes
+            // 
+            this.dtgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgClientes.Location = new System.Drawing.Point(269, 95);
+            this.dtgClientes.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgClientes.Name = "dtgClientes";
+            this.dtgClientes.ReadOnly = true;
+            this.dtgClientes.RowHeadersWidth = 51;
+            this.dtgClientes.RowTemplate.Height = 24;
+            this.dtgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgClientes.Size = new System.Drawing.Size(604, 289);
+            this.dtgClientes.TabIndex = 66;
+            // 
             // GestionarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(884, 438);
+            this.Controls.Add(this.dtgClientes);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.mskTelefono);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.gpbTipoCliente);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbMetodoPago);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.pictureBox1);
@@ -291,14 +295,17 @@ namespace Hilton.Vista
             this.Controls.Add(this.label2);
             this.Controls.Add(this.mskCedula);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtgHoteles);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(900, 477);
+            this.MinimumSize = new System.Drawing.Size(900, 477);
             this.Name = "GestionarClientes";
             this.Text = "GestionarClientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgHoteles)).EndInit();
+            this.Load += new System.EventHandler(this.GestionarClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gpbTipoCliente.ResumeLayout(false);
             this.gpbTipoCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,7 +314,6 @@ namespace Hilton.Vista
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dtgHoteles;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox mskCedula;
@@ -317,7 +323,7 @@ namespace Hilton.Vista
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbMetodoPago;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox gpbTipoCliente;
         private System.Windows.Forms.RadioButton rdbSocio;
@@ -327,5 +333,6 @@ namespace Hilton.Vista
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dtgClientes;
     }
 }

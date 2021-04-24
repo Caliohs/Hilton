@@ -134,35 +134,35 @@ namespace Hilton.Controlador
                 parParameter[0].SqlValue = objHotel.Opc;
 
                 parParameter[1] = new SqlParameter();
-                parParameter[1].ParameterName = "@nombre";
+                parParameter[1].ParameterName = "@codigo";
                 parParameter[1].SqlDbType = SqlDbType.VarChar;
                 parParameter[1].Size = 30;
-                parParameter[1].SqlValue = objHotel.Nombre;
+                parParameter[1].SqlValue = objHotel.Codigo;
 
                 parParameter[2] = new SqlParameter();
-                parParameter[2].ParameterName = "@pais";
+                parParameter[2].ParameterName = "@nombre";
                 parParameter[2].SqlDbType = SqlDbType.VarChar;
                 parParameter[2].Size = 30;
-                parParameter[2].SqlValue = objHotel.Pais;
+                parParameter[2].SqlValue = objHotel.Nombre;
 
                 parParameter[3] = new SqlParameter();
-                parParameter[3].ParameterName = "@estado";
+                parParameter[3].ParameterName = "@pais";
                 parParameter[3].SqlDbType = SqlDbType.VarChar;
                 parParameter[3].Size = 30;
-                parParameter[3].SqlValue = objHotel.Estado;
+                parParameter[3].SqlValue = objHotel.Pais;
 
                 parParameter[4] = new SqlParameter();
-                parParameter[4].ParameterName = "@cantidad";
+                parParameter[4].ParameterName = "@estado";
                 parParameter[4].SqlDbType = SqlDbType.VarChar;
                 parParameter[4].Size = 30;
-                parParameter[4].SqlValue = objHotel.CantidadHabi;
+                parParameter[4].SqlValue = objHotel.Estado;
 
                 parParameter[5] = new SqlParameter();
-                parParameter[5].ParameterName = "@especializacion";
+                parParameter[5].ParameterName = "@cantidad";
                 parParameter[5].SqlDbType = SqlDbType.VarChar;
                 parParameter[5].Size = 30;
-                parParameter[5].SqlValue = objHotel.Especializacion;
-
+                parParameter[5].SqlValue = objHotel.CantidadHabi;
+            
                 parParameter[6] = new SqlParameter();
                 parParameter[6].ParameterName = "@presupuesto";
                 parParameter[6].SqlDbType = SqlDbType.VarChar;
