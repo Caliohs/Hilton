@@ -197,13 +197,11 @@ namespace Hilton.Controlador
 
                 parParameter[1] = new SqlParameter();
                 parParameter[1].ParameterName = "@codigo";
-                parParameter[1].SqlDbType = SqlDbType.Int;
+                parParameter[1].SqlDbType = SqlDbType.VarChar;
+                parParameter[1].Size = 30;
                 parParameter[1].SqlValue = objHotel.Codigo;
 
-
-
                 cnGeneral.EjecutarSP(parParameter, "SPHotel");
-
 
 
             }
@@ -212,7 +210,42 @@ namespace Hilton.Controlador
                 throw new Exception(ex.Message);
             }
 
-
         }
+
+        public DataTable Buscar()
+        {
+
+            tblDatos = new DataTable();
+
+            try
+            {
+                cnGeneral = new Datos();
+
+                SqlParameter[] parParameter = new SqlParameter[2];
+
+                parParameter[0] = new SqlParameter();
+                parParameter[0].ParameterName = "@opc";
+                parParameter[0].SqlDbType = SqlDbType.Int;
+                parParameter[0].SqlValue = objHotel.Opc;
+
+                parParameter[1] = new SqlParameter();
+                parParameter[1].ParameterName = "@especializacion";
+                parParameter[1].SqlDbType = SqlDbType.VarChar;
+                parParameter[1].Size = 30;
+                parParameter[1].SqlValue = objHotel.Especializacion;
+
+
+
+                tblDatos = cnGeneral.RetornaTabla(parParameter, "SPHotel");
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return tblDatos;
+        }
+
     }
 }
