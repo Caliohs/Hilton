@@ -15,7 +15,7 @@ namespace Hilton.Vista
     {
         private DataTable datos;
         private Hotel hotel;
-        private  HotelHelper hotelHelper;  
+        private HotelHelper hotelHelper;
         public GestionarHoteles()
         {
             InitializeComponent();
@@ -26,21 +26,14 @@ namespace Hilton.Vista
             Listar();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         public void Guardar_Hotel()
         {
             try
             {
                 DateTime dt = DateTime.Today;
-                Random rnd = new Random();             
+                Random rnd = new Random();
                 string codigo = rnd.Next().ToString();
-             
+
                 string radioseleccionado = String.Empty;
                 foreach (RadioButton radio in gpbEspecializacion.Controls)
                 {
@@ -67,7 +60,6 @@ namespace Hilton.Vista
                 MessageBox.Show(ex.Message);
             }
         }
-        
 
         public void Listar()
         {
@@ -88,12 +80,13 @@ namespace Hilton.Vista
                 MessageBox.Show(ex.Message);
             }
         }
+
         public void Buscar()
         {
             try
             {
                 hotel = new Hotel();
-                hotel.Opc = 5;
+                hotel.Opc = 4;
                 hotel.Especializacion = cmbBuscar.Text;
                 hotelHelper = new HotelHelper(hotel);
                 datos = hotelHelper.Buscar();
@@ -101,7 +94,8 @@ namespace Hilton.Vista
                 if (datos.Rows.Count > 0)
                 {
                     dtgHoteles.DataSource = datos;
-                }else
+                }
+                else
                     MessageBox.Show("no hay datos para Hotel tipo" + cmbBuscar.Text);
             }
             catch (Exception ex)
@@ -143,7 +137,7 @@ namespace Hilton.Vista
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         public void actualizar()
@@ -190,9 +184,9 @@ namespace Hilton.Vista
                     this.txtNombre.Text = fila["nombre"].ToString();
                     this.txtPais.Text = fila["pais"].ToString();
                     this.txtEstado.Text = fila["estado"].ToString();
-                    this.mskCantHabi.Text= fila["cantidad"].ToString();
-                    this.mskPresupuesto.Text= fila["presupuesto"].ToString();
-                   
+                    this.mskCantHabi.Text = fila["cantidad"].ToString();
+                    this.mskPresupuesto.Text = fila["presupuesto"].ToString();
+
                     string radioseleccionado = String.Empty;
                     foreach (RadioButton radio in gpbEspecializacion.Controls)
                     {
@@ -210,7 +204,6 @@ namespace Hilton.Vista
             }
         }
 
-
         public void limpiar()
         {
             foreach (RadioButton radio in gpbEspecializacion.Controls)
@@ -225,36 +218,6 @@ namespace Hilton.Vista
             this.mskPresupuesto.Clear();
             this.gpbEspecializacion.Enabled = true;
 
-        }
-
-        private void toolStripMenuEliminar_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                datos = (DataTable)dtgHoteles.DataSource;
-                if (datos == null)
-                    MessageBox.Show("No hay usuarios por Eliminar");
-
-                else
-                {
-                    int indice = dtgHoteles.CurrentRow.Index;
-                    DataRow fila = datos.Rows[indice];
-                    hotel = new Hotel();
-                    hotel.Opc = 4;
-                    hotel.Codigo = fila["codigo"].ToString();
-                    hotelHelper = new HotelHelper(hotel);
-                    hotelHelper.Eliminar();
-                    MessageBox.Show("Hotel Eliminado con Exito");
-                    Listar();
-
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

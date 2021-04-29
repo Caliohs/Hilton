@@ -39,14 +39,11 @@ namespace Hilton.Vista
                     this.hotelesToolStripMenuItem.Visible = false;
                     this.usuariosToolStripMenuItem.Visible = false;
                     this.clientesToolStripMenuItem.Visible = false;
-                    
                     break;
 
                 case "Administrador":
                     this.hotelesToolStripMenuItem.Visible = false;
                     this.usuariosToolStripMenuItem.Visible = false;
-                   
-
                     break;
             }
         }

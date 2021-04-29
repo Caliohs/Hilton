@@ -29,6 +29,7 @@ namespace Hilton.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarReservas));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,9 +57,13 @@ namespace Hilton.Vista
             this.lblTipoCliente = new System.Windows.Forms.Label();
             this.cmbHotel = new System.Windows.Forms.ComboBox();
             this.cmbCedula = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuActualizar = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuEliminar = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gpbFechas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtReservas)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -83,16 +88,17 @@ namespace Hilton.Vista
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(942, 60);
+            this.txtBuscar.Location = new System.Drawing.Point(908, 60);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(108, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(142, 20);
             this.txtBuscar.TabIndex = 39;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(888, 63);
+            this.label6.Location = new System.Drawing.Point(864, 63);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
@@ -267,10 +273,10 @@ namespace Hilton.Vista
             // 
             this.dgtReservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgtReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgtReservas.ContextMenuStrip = this.contextMenuStrip1;
             this.dgtReservas.Location = new System.Drawing.Point(273, 85);
             this.dgtReservas.Margin = new System.Windows.Forms.Padding(2);
             this.dgtReservas.Name = "dgtReservas";
-            this.dgtReservas.ReadOnly = true;
             this.dgtReservas.RowHeadersWidth = 51;
             this.dgtReservas.RowTemplate.Height = 24;
             this.dgtReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -326,6 +332,28 @@ namespace Hilton.Vista
             this.cmbCedula.TabIndex = 67;
             this.cmbCedula.SelectedIndexChanged += new System.EventHandler(this.cmbCedula_SelectedIndexChanged);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuActualizar,
+            this.toolStripMenuEliminar});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(127, 48);
+            // 
+            // toolStripMenuActualizar
+            // 
+            this.toolStripMenuActualizar.Name = "toolStripMenuActualizar";
+            this.toolStripMenuActualizar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuActualizar.Text = "Actualizar";
+            this.toolStripMenuActualizar.Click += new System.EventHandler(this.toolStripMenuActualizar_Click);
+            // 
+            // toolStripMenuEliminar
+            // 
+            this.toolStripMenuEliminar.Name = "toolStripMenuEliminar";
+            this.toolStripMenuEliminar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuEliminar.Text = "Eliminar";
+            this.toolStripMenuEliminar.Click += new System.EventHandler(this.toolStripMenuEliminar_Click);
+            // 
             // GestionarReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,6 +392,7 @@ namespace Hilton.Vista
             this.gpbFechas.ResumeLayout(false);
             this.gpbFechas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtReservas)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,5 +426,8 @@ namespace Hilton.Vista
         private System.Windows.Forms.Label lblTipoCliente;
         private System.Windows.Forms.ComboBox cmbHotel;
         private System.Windows.Forms.ComboBox cmbCedula;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuActualizar;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuEliminar;
     }
 }

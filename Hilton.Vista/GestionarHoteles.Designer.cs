@@ -33,6 +33,8 @@ namespace Hilton.Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarHoteles));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dtgHoteles = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuActualizar = new System.Windows.Forms.ToolStripMenuItem();
             this.txtPais = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
@@ -53,20 +55,17 @@ namespace Hilton.Vista
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.cmbBuscar = new System.Windows.Forms.ComboBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuActualizar = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuEliminar = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHoteles)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.gpbEspecializacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Maiandra GD", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(441, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(406, 9);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(200, 26);
@@ -87,6 +86,20 @@ namespace Hilton.Vista
             this.dtgHoteles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgHoteles.Size = new System.Drawing.Size(619, 289);
             this.dtgHoteles.TabIndex = 23;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuActualizar});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(127, 26);
+            // 
+            // toolStripMenuActualizar
+            // 
+            this.toolStripMenuActualizar.Name = "toolStripMenuActualizar";
+            this.toolStripMenuActualizar.Size = new System.Drawing.Size(126, 22);
+            this.toolStripMenuActualizar.Text = "Actualizar";
+            this.toolStripMenuActualizar.Click += new System.EventHandler(this.toolStripMenuActualizar_Click);
             // 
             // txtPais
             // 
@@ -285,7 +298,6 @@ namespace Hilton.Vista
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 40;
             this.lblNombre.Text = "Nombre";
-            this.lblNombre.Click += new System.EventHandler(this.label7_Click);
             // 
             // cmbBuscar
             // 
@@ -301,28 +313,6 @@ namespace Hilton.Vista
             this.cmbBuscar.Size = new System.Drawing.Size(141, 21);
             this.cmbBuscar.TabIndex = 41;
             this.cmbBuscar.SelectedIndexChanged += new System.EventHandler(this.cmbBuscar_SelectedIndexChanged);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuActualizar,
-            this.toolStripMenuEliminar});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(127, 48);
-            // 
-            // toolStripMenuActualizar
-            // 
-            this.toolStripMenuActualizar.Name = "toolStripMenuActualizar";
-            this.toolStripMenuActualizar.Size = new System.Drawing.Size(126, 22);
-            this.toolStripMenuActualizar.Text = "Actualizar";
-            this.toolStripMenuActualizar.Click += new System.EventHandler(this.toolStripMenuActualizar_Click);
-            // 
-            // toolStripMenuEliminar
-            // 
-            this.toolStripMenuEliminar.Name = "toolStripMenuEliminar";
-            this.toolStripMenuEliminar.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuEliminar.Text = "Eliminar";
-            this.toolStripMenuEliminar.Click += new System.EventHandler(this.toolStripMenuEliminar_Click);
             // 
             // GestionarHoteles
             // 
@@ -352,13 +342,14 @@ namespace Hilton.Vista
             this.MaximumSize = new System.Drawing.Size(900, 477);
             this.MinimumSize = new System.Drawing.Size(900, 477);
             this.Name = "GestionarHoteles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GestionarHoteles";
             this.Load += new System.EventHandler(this.GestionarHoteles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgHoteles)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.gpbEspecializacion.ResumeLayout(false);
             this.gpbEspecializacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,6 +381,5 @@ namespace Hilton.Vista
         private System.Windows.Forms.ComboBox cmbBuscar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuActualizar;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuEliminar;
     }
 }

@@ -54,7 +54,6 @@ namespace Hilton.Vista
             this.dtgClientes = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuActualizar = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuEliminar = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gpbTipoCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
@@ -284,10 +283,9 @@ namespace Hilton.Vista
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuActualizar,
-            this.toolStripMenuEliminar});
+            this.toolStripMenuActualizar});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(127, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
             // 
             // toolStripMenuActualizar
             // 
@@ -295,13 +293,6 @@ namespace Hilton.Vista
             this.toolStripMenuActualizar.Size = new System.Drawing.Size(126, 22);
             this.toolStripMenuActualizar.Text = "Actualizar";
             this.toolStripMenuActualizar.Click += new System.EventHandler(this.toolStripMenuActualizar_Click);
-            // 
-            // toolStripMenuEliminar
-            // 
-            this.toolStripMenuEliminar.Name = "toolStripMenuEliminar";
-            this.toolStripMenuEliminar.Size = new System.Drawing.Size(126, 22);
-            this.toolStripMenuEliminar.Text = "Eliminar";
-            this.toolStripMenuEliminar.Click += new System.EventHandler(this.toolStripMenuEliminar_Click);
             // 
             // GestionarClientes
             // 
@@ -368,6 +359,5 @@ namespace Hilton.Vista
         private System.Windows.Forms.DataGridView dtgClientes;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuActualizar;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuEliminar;
     }
 }

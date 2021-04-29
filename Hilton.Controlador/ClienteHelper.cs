@@ -20,7 +20,7 @@ namespace Hilton.Controlador
         {
            objCliente = parCliente;
         }
-        //RETORA TABLA CON LOS CONTACTOS
+        
         public DataTable Listar()
         {
 
@@ -49,7 +49,6 @@ namespace Hilton.Controlador
             return tblDatos;
         }
 
-        //GUARDA CONTACTO
         public void Guardar()
         {
             try
@@ -111,7 +110,6 @@ namespace Hilton.Controlador
 
 
         }
-
 
         public void Actualizar()
         {
@@ -177,38 +175,6 @@ namespace Hilton.Controlador
             }
 
 
-        }
-        public void Eliminar()
-        {
-
-            try
-            {
-                cnGeneral = new Datos();
-
-                SqlParameter[] parParameter = new SqlParameter[2];
-
-                parParameter[0] = new SqlParameter();
-                parParameter[0].ParameterName = "@opc";
-                parParameter[0].SqlDbType = SqlDbType.Int;
-                parParameter[0].SqlValue = objCliente.Opc;
-
-                parParameter[1] = new SqlParameter();
-                parParameter[1].ParameterName = "@cedula";
-                parParameter[1].SqlDbType = SqlDbType.VarChar;
-                parParameter[1].Size = 30;
-                parParameter[1].SqlValue = objCliente.Cedula;
-
-
-
-                cnGeneral.EjecutarSP(parParameter, "SPCliente");
-
-
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
         }
 
         public DataTable Buscar()

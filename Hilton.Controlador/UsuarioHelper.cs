@@ -47,7 +47,6 @@ namespace Hilton.Controlador
             return tblDatos;
         }
 
-    
         public void Guardar()
         {
             try
@@ -209,6 +208,7 @@ namespace Hilton.Controlador
                 throw new Exception(ex.Message);
             }
         }
+
         public DataTable validarLogin()
         {
 

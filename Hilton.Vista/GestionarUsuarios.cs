@@ -27,16 +27,15 @@ namespace Hilton.Vista
         {
             try
             {
-                if (this.mskCedula.ReadOnly==false)
+                if (this.mskCedula.ReadOnly == false)
                 {
                     agregar();
                 }
 
                 else
                 {
-                    actualizar();                 
+                    actualizar();
                 }
-
             }
             catch (Exception ex)
             {
@@ -48,17 +47,11 @@ namespace Hilton.Vista
         {
             try
             {
-               
-
-                // inicializar Contacto
                 user = new Usuario();
                 user.Opc = 2;
-
-                // inicializar ContactoHelper
                 userH = new UsuarioHelper(user);
                 datos = userH.Listar();
 
-                // cargar datos en el datagrid
                 if (datos.Rows.Count > 0)
                     dtgUsuarios.DataSource = datos;
             }
@@ -66,8 +59,9 @@ namespace Hilton.Vista
             {
                 MessageBox.Show(ex.Message);
             }
-            finally { 
-                this.dtgUsuarios.Columns[7].Visible = false;
+            finally
+            {
+                this.dtgUsuarios.Columns[7].Visible = false; /*oculta la cloumna de contraseñas*/
             }
         }
 
@@ -75,10 +69,8 @@ namespace Hilton.Vista
         {
             try
             {
-
                 if (this.txtClave.Text == this.txtConfClave.Text)
-                {
-                    // inicializar Contacto
+                {                  
                     user = new Usuario();
                     user.Nombre = this.txtNombre.Text;
                     user.Cedula = this.mskCedula.Text;
@@ -90,10 +82,8 @@ namespace Hilton.Vista
                     user.Clave = this.txtClave.Text;
                     user.Opc = 1;
 
-                    // inicializar ContactoHelper
                     userH = new UsuarioHelper(user);
                     userH.Guardar();
-
                     MessageBox.Show("Usuario almacenado con éxito");
                     limpiar();
                     listar();
@@ -112,8 +102,6 @@ namespace Hilton.Vista
             {
                 if (this.txtClave.Text == this.txtConfClave.Text)
                 {
-                  
-
                     user = new Usuario();
                     user.Nombre = this.txtNombre.Text;
                     user.Cedula = this.mskCedula.Text;
@@ -126,7 +114,6 @@ namespace Hilton.Vista
 
                     userH = new UsuarioHelper(user);
                     userH.Actualizar();
-
                     MessageBox.Show("Usuario actualizado");
                     limpiar();
                     listar();
@@ -193,7 +180,6 @@ namespace Hilton.Vista
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -234,16 +220,13 @@ namespace Hilton.Vista
         {
             try
             {
-                // inicializar Contacto
+              
                 user = new Usuario();
                 user.Opc = 5;
                 user.Nombre = this.txtBuscar.Text;
-
-                // inicializar ContactoHelper
                 userH = new UsuarioHelper(user);
                 datos = userH.Buscar();
 
-                // cargar datos en el datagrid
                 if (datos.Rows.Count > 0)
                     dtgUsuarios.DataSource = datos;
             }
@@ -259,4 +242,4 @@ namespace Hilton.Vista
         }
     }
 }
- 
+
