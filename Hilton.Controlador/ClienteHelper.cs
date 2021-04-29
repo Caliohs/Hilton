@@ -194,7 +194,8 @@ namespace Hilton.Controlador
 
                 parParameter[1] = new SqlParameter();
                 parParameter[1].ParameterName = "@cedula";
-                parParameter[1].SqlDbType = SqlDbType.Int; 
+                parParameter[1].SqlDbType = SqlDbType.VarChar;
+                parParameter[1].Size = 30;
                 parParameter[1].SqlValue = objCliente.Cedula;
 
 
@@ -208,8 +209,72 @@ namespace Hilton.Controlador
             {
                 throw new Exception(ex.Message);
             }
+        }
 
+        public DataTable Buscar()
+        {
 
+            tblDatos = new DataTable();
+
+            try
+            {
+                cnGeneral = new Datos();
+
+                SqlParameter[] parParameter = new SqlParameter[2];
+
+                parParameter[0] = new SqlParameter();
+                parParameter[0].ParameterName = "@opc";
+                parParameter[0].SqlDbType = SqlDbType.Int;
+                parParameter[0].SqlValue = objCliente.Opc;
+
+                parParameter[1] = new SqlParameter();
+                parParameter[1].ParameterName = "@nombre";
+                parParameter[1].SqlDbType = SqlDbType.VarChar;
+                parParameter[1].Size = 30;
+                parParameter[1].SqlValue = objCliente.Nombre;
+
+                tblDatos = cnGeneral.RetornaTabla(parParameter, "SPCliente");
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return tblDatos;
+        }
+
+        public DataTable BuscarClientePorCedula()
+        {
+
+            tblDatos = new DataTable();
+
+            try
+            {
+                cnGeneral = new Datos();
+
+                SqlParameter[] parParameter = new SqlParameter[2];
+
+                parParameter[0] = new SqlParameter();
+                parParameter[0].ParameterName = "@opc";
+                parParameter[0].SqlDbType = SqlDbType.Int;
+                parParameter[0].SqlValue = objCliente.Opc;
+
+                parParameter[1] = new SqlParameter();
+                parParameter[1].ParameterName = "@cedula";
+                parParameter[1].SqlDbType = SqlDbType.VarChar;
+                parParameter[1].Size = 30;
+                parParameter[1].SqlValue = objCliente.Cedula;
+
+                tblDatos = cnGeneral.RetornaTabla(parParameter, "SPCliente");
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return tblDatos;
         }
     }
 }

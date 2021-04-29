@@ -29,6 +29,7 @@ namespace Hilton.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionarClientes));
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -51,9 +52,13 @@ namespace Hilton.Vista
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuActualizar = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuEliminar = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gpbTipoCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -119,6 +124,7 @@ namespace Hilton.Vista
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(157, 20);
             this.txtBuscar.TabIndex = 50;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label6
             // 
@@ -139,6 +145,7 @@ namespace Hilton.Vista
             this.btnCancelar.TabIndex = 56;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -263,6 +270,7 @@ namespace Hilton.Vista
             // 
             this.dtgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgClientes.ContextMenuStrip = this.contextMenuStrip1;
             this.dtgClientes.Location = new System.Drawing.Point(269, 95);
             this.dtgClientes.Margin = new System.Windows.Forms.Padding(2);
             this.dtgClientes.Name = "dtgClientes";
@@ -272,6 +280,28 @@ namespace Hilton.Vista
             this.dtgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgClientes.Size = new System.Drawing.Size(604, 289);
             this.dtgClientes.TabIndex = 66;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuActualizar,
+            this.toolStripMenuEliminar});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(127, 48);
+            // 
+            // toolStripMenuActualizar
+            // 
+            this.toolStripMenuActualizar.Name = "toolStripMenuActualizar";
+            this.toolStripMenuActualizar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuActualizar.Text = "Actualizar";
+            this.toolStripMenuActualizar.Click += new System.EventHandler(this.toolStripMenuActualizar_Click);
+            // 
+            // toolStripMenuEliminar
+            // 
+            this.toolStripMenuEliminar.Name = "toolStripMenuEliminar";
+            this.toolStripMenuEliminar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuEliminar.Text = "Eliminar";
+            this.toolStripMenuEliminar.Click += new System.EventHandler(this.toolStripMenuEliminar_Click);
             // 
             // GestionarClientes
             // 
@@ -306,6 +336,7 @@ namespace Hilton.Vista
             this.gpbTipoCliente.ResumeLayout(false);
             this.gpbTipoCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,5 +365,8 @@ namespace Hilton.Vista
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dtgClientes;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuActualizar;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuEliminar;
     }
 }

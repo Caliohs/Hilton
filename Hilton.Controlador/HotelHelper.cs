@@ -20,7 +20,7 @@ namespace Hilton.Controlador
         {
             objHotel = parHotel;
         }
-        //RETORA TABLA CON LOS CONTACTOS
+      
         public DataTable Listar()
         {
 
@@ -49,7 +49,7 @@ namespace Hilton.Controlador
             return tblDatos;
         }
 
-        //GUARDA CONTACTO
+       
         public void Guardar()
         {
             try
@@ -233,6 +233,41 @@ namespace Hilton.Controlador
                 parParameter[1].SqlDbType = SqlDbType.VarChar;
                 parParameter[1].Size = 30;
                 parParameter[1].SqlValue = objHotel.Especializacion;
+
+
+
+                tblDatos = cnGeneral.RetornaTabla(parParameter, "SPHotel");
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return tblDatos;
+        }
+
+        public DataTable BuscarHotel()
+        {
+
+            tblDatos = new DataTable();
+
+            try
+            {
+                cnGeneral = new Datos();
+
+                SqlParameter[] parParameter = new SqlParameter[2];
+
+                parParameter[0] = new SqlParameter();
+                parParameter[0].ParameterName = "@opc";
+                parParameter[0].SqlDbType = SqlDbType.Int;
+                parParameter[0].SqlValue = objHotel.Opc;
+
+                parParameter[1] = new SqlParameter();
+                parParameter[1].ParameterName = "@nombre";
+                parParameter[1].SqlDbType = SqlDbType.VarChar;
+                parParameter[1].Size = 30;
+                parParameter[1].SqlValue = objHotel.Nombre;
 
 
 
