@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hilton.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,33 @@ namespace Hilton.Vista
         public Principal()
         {
             InitializeComponent();
+        }
+
+        public Principal(Usuario obj)
+        {
+            InitializeComponent();
+            this.statusUsuario.Text = "Bienvenid@ " + obj.Nombre;
+            validarPerfil(obj.Perfil);
+        }
+
+        private void validarPerfil(object perfil)
+        {
+            switch (perfil)
+            {
+                case "Plataforma":
+                    this.hotelesToolStripMenuItem.Visible = false;
+                    this.usuariosToolStripMenuItem.Visible = false;
+                    this.clientesToolStripMenuItem.Visible = false;
+                    
+                    break;
+
+                case "Administrador":
+                    this.hotelesToolStripMenuItem.Visible = false;
+                    this.usuariosToolStripMenuItem.Visible = false;
+                   
+
+                    break;
+            }
         }
 
         private void reIngresarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +98,18 @@ namespace Hilton.Vista
             this.addUser = new GestionarUsuarios();
             this.addUser.MdiParent = this;
             this.addUser.Show();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.acerca = new Acercade();
+            this.acerca.MdiParent = this;
+            this.acerca.Show();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

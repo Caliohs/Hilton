@@ -48,6 +48,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reserva.cs" />
     <Compile Include="ReservaHelper.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hilton.Modelo\Hilton.Modelo.csproj">

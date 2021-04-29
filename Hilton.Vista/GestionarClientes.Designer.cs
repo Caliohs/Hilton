@@ -83,7 +83,7 @@ namespace Hilton.Vista
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 155);
+            this.label2.Location = new System.Drawing.Point(30, 160);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
@@ -101,7 +101,7 @@ namespace Hilton.Vista
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 112);
+            this.label3.Location = new System.Drawing.Point(30, 117);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
@@ -172,7 +172,7 @@ namespace Hilton.Vista
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 201);
+            this.label4.Location = new System.Drawing.Point(30, 206);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
@@ -185,7 +185,7 @@ namespace Hilton.Vista
             this.gpbTipoCliente.Controls.Add(this.rdbVip);
             this.gpbTipoCliente.Controls.Add(this.rdbRegular);
             this.gpbTipoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbTipoCliente.Location = new System.Drawing.Point(22, 235);
+            this.gpbTipoCliente.Location = new System.Drawing.Point(22, 240);
             this.gpbTipoCliente.Name = "gpbTipoCliente";
             this.gpbTipoCliente.Size = new System.Drawing.Size(227, 45);
             this.gpbTipoCliente.TabIndex = 59;
@@ -241,7 +241,7 @@ namespace Hilton.Vista
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 351);
+            this.label5.Location = new System.Drawing.Point(30, 355);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
@@ -259,7 +259,7 @@ namespace Hilton.Vista
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 308);
+            this.label7.Location = new System.Drawing.Point(30, 312);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
@@ -292,14 +292,14 @@ namespace Hilton.Vista
             // toolStripMenuActualizar
             // 
             this.toolStripMenuActualizar.Name = "toolStripMenuActualizar";
-            this.toolStripMenuActualizar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuActualizar.Size = new System.Drawing.Size(126, 22);
             this.toolStripMenuActualizar.Text = "Actualizar";
             this.toolStripMenuActualizar.Click += new System.EventHandler(this.toolStripMenuActualizar_Click);
             // 
             // toolStripMenuEliminar
             // 
             this.toolStripMenuEliminar.Name = "toolStripMenuEliminar";
-            this.toolStripMenuEliminar.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuEliminar.Size = new System.Drawing.Size(126, 22);
             this.toolStripMenuEliminar.Text = "Eliminar";
             this.toolStripMenuEliminar.Click += new System.EventHandler(this.toolStripMenuEliminar_Click);
             // 
@@ -330,6 +330,7 @@ namespace Hilton.Vista
             this.MaximumSize = new System.Drawing.Size(900, 477);
             this.MinimumSize = new System.Drawing.Size(900, 477);
             this.Name = "GestionarClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GestionarClientes";
             this.Load += new System.EventHandler(this.GestionarClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -232,6 +232,11 @@ namespace Hilton.Vista
             tarifa = 0;
             porcentaje = "100%";
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 

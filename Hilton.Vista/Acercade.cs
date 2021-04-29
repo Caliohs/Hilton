@@ -16,5 +16,10 @@ namespace Hilton.Vista
         {
             InitializeComponent();
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

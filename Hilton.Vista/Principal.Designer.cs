@@ -75,14 +75,14 @@ namespace Hilton.Vista
             // reIngresarToolStripMenuItem
             // 
             this.reIngresarToolStripMenuItem.Name = "reIngresarToolStripMenuItem";
-            this.reIngresarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reIngresarToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.reIngresarToolStripMenuItem.Text = "Re Ingresar";
             this.reIngresarToolStripMenuItem.Click += new System.EventHandler(this.reIngresarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -97,7 +97,7 @@ namespace Hilton.Vista
             // gestionarHotelesToolStripMenuItem
             // 
             this.gestionarHotelesToolStripMenuItem.Name = "gestionarHotelesToolStripMenuItem";
-            this.gestionarHotelesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gestionarHotelesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.gestionarHotelesToolStripMenuItem.Text = "Gestionar Hoteles ";
             this.gestionarHotelesToolStripMenuItem.Click += new System.EventHandler(this.gestionarHotelesToolStripMenuItem_Click);
             // 
@@ -112,7 +112,7 @@ namespace Hilton.Vista
             // gestionarReservasToolStripMenuItem
             // 
             this.gestionarReservasToolStripMenuItem.Name = "gestionarReservasToolStripMenuItem";
-            this.gestionarReservasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gestionarReservasToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.gestionarReservasToolStripMenuItem.Text = "Gestionar Reservas ";
             this.gestionarReservasToolStripMenuItem.Click += new System.EventHandler(this.gestionarReservasToolStripMenuItem_Click);
             // 
@@ -127,7 +127,7 @@ namespace Hilton.Vista
             // gestionarClientesToolStripMenuItem
             // 
             this.gestionarClientesToolStripMenuItem.Name = "gestionarClientesToolStripMenuItem";
-            this.gestionarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gestionarClientesToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.gestionarClientesToolStripMenuItem.Text = "Gestionar Clientes ";
             this.gestionarClientesToolStripMenuItem.Click += new System.EventHandler(this.gestionarClientesToolStripMenuItem_Click);
             // 
@@ -142,7 +142,7 @@ namespace Hilton.Vista
             // gestionarUsuariosToolStripMenuItem
             // 
             this.gestionarUsuariosToolStripMenuItem.Name = "gestionarUsuariosToolStripMenuItem";
-            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.gestionarUsuariosToolStripMenuItem.Text = "Gestionar Usuarios";
             this.gestionarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionarUsuariosToolStripMenuItem_Click);
             // 
@@ -151,6 +151,7 @@ namespace Hilton.Vista
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
             this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.acercaDeToolStripMenuItem.Text = "Acerca de ";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -179,6 +180,8 @@ namespace Hilton.Vista
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
             this.Text = "Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

@@ -16,7 +16,7 @@ namespace Hilton.Vista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionarReservas());
+            Application.Run(new Login());
         }
     }
 }
